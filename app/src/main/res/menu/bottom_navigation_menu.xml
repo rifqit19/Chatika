@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home"
+        android:title="Beranda" />
+
+
+    <item
+        android:id="@+id/saved_message"
+        android:icon="@drawable/ic_save"
+        android:title="Tersimpan" />
+
+<!--    <item-->
+<!--        android:id="@+id/baverages"-->
+<!--        android:icon="@drawable/ic_baverages"-->
+<!--        android:title="Baverages" />-->
+
+
+
+</menu>
