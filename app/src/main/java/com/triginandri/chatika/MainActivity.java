@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.triginandri.chatika.helper.SharedPrefManager;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -37,6 +38,12 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     }
 
     private void setupfunction(){
+
+        if (!SharedPrefManager.getInstance(this).isLoggedIn()) {
+            finish();
+            startActivity(new Intent(this, Login.class));
+            return;
+        }
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override

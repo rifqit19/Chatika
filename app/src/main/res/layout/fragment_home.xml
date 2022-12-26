@@ -36,6 +36,7 @@
                 app:layout_collapseMode="parallax"
                 android:scaleType="fitCenter">
 
+
                 <ImageView
                     android:id="@+id/union_right"
                     android:layout_width="wrap_content"
@@ -46,18 +47,6 @@
                     android:layout_marginTop="@dimen/margin_medium"
                     />
 
-                <ImageButton
-                    android:id="@+id/btnProfil"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_profile"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:background="@color/blue"
-                    android:padding="@dimen/margin_extra_small"
-                    android:layout_marginTop="@dimen/margin_smid"
-                    android:layout_marginEnd="@dimen/margin_smid"
-                    />
 
                 <ImageView
                     android:id="@+id/img_logo"
@@ -72,7 +61,7 @@
                     />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_login"
+                    android:id="@+id/btn_message"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="T U L I S  P E S A N"
@@ -86,8 +75,6 @@
                     android:layout_marginEnd="@dimen/margin_medium"
                     />
 
-
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.appcompat.widget.Toolbar
@@ -96,7 +83,28 @@
                 android:layout_height="?attr/actionBarSize"
                 app:layout_scrollFlags="scroll|enterAlways"
                 app:layout_collapseMode="pin"
-                />
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/btnProfil"
+                        android:layout_width="?attr/actionBarSize"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_profile"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:background="@color/blue"
+                        android:padding="@dimen/margin_extra_small"
+                        android:clickable="true"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
