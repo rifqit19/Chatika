@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.Toolbar;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -25,6 +26,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -38,6 +40,7 @@ public class Login extends AppCompatActivity {
     TextInputEditText fldEmail, fldPassword;
     AppCompatButton btnLogin;
     private ProgressBar loadingPB;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +67,7 @@ public class Login extends AppCompatActivity {
         tvRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Login.this, Register.class);
+                Intent i = new Intent(Login.this, Register.class).addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startActivity(i);
             }
         });
@@ -132,7 +135,7 @@ public class Login extends AppCompatActivity {
 //                            Toast.makeText(Login.this, users.getName(), Toast.LENGTH_SHORT).show();
 
                             startActivity(new Intent(Login.this, MainActivity.class));
-                            finish();
+                            Login.super.finish();
                         }
 
                     } catch (JSONException e){
@@ -159,7 +162,6 @@ public class Login extends AppCompatActivity {
             }
         });
     }
-
 
 
 }

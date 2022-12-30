@@ -96,7 +96,7 @@
                         android:src="@drawable/ic_profile"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        android:background="@color/blue"
+                        android:background="@color/transparent"
                         android:padding="@dimen/margin_extra_small"
                         android:clickable="true"
                         />
@@ -121,22 +121,27 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:elevation="@dimen/margin_medium"
-            android:orientation="vertical"
-            android:padding="@dimen/margin_medium">
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tv_desc"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_news"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="serif"
-                android:lineSpacingExtra="14sp"
-                android:text="-"
-                android:textColor="@color/text_color"
-                android:textSize="@dimen/txt_medium" />
+                android:padding="@dimen/margin_medium"
+                android:clipToPadding="false"/>
 
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/idLoadingPB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        />
+
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

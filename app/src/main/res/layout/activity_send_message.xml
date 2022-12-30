@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SendMessage">
+
+    <ImageView
+        android:id="@+id/union_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/union_right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/margin_medium"
+        />
+
+    <ImageView
+        android:id="@+id/union_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/union_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="141dp"
+        />
+
+
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/blue"
+        >
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:backgroundTint="@color/blue"
+            android:src="@drawable/ic_back_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/btnBack"
+            android:layout_marginStart="@dimen/margin_small"
+            android:text="Tulis Pesan"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_medium"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tulis pesan kamu untuk dosen disini"
+                app:layout_constraintTop_toBottomOf="@id/img_logo"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/txt_medium"
+                android:lineSpacingExtra="3dp"
+                android:textStyle="bold"
+                />
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_marginStart="@dimen/margin_medium"-->
+<!--                android:layout_marginEnd="@dimen/margin_medium"-->
+<!--                android:layout_marginTop="@dimen/margin_medium"-->
+<!--                android:visibility="gone"-->
+<!--                android:weightSum="6"-->
+<!--                >-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="Nomor Dosen"-->
+<!--                    app:boxStrokeColor="@color/blue"-->
+<!--                    app:boxStrokeWidth="0dp"-->
+<!--                    app:hintTextColor="@color/blue"-->
+<!--                    app:boxStrokeWidthFocused="0dp"-->
+<!--                    android:layout_weight="6">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/fld_nomor_dosen"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:inputType="textPersonName"-->
+<!--                        android:background="@drawable/bg_field"-->
+<!--                        android:textColor="@color/text_color"-->
+<!--                        />-->
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <ImageButton-->
+<!--                    android:id="@+id/btn_contact"-->
+<!--                    android:layout_width="36dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:backgroundTint="@color/white"-->
+<!--                    android:src="@drawable/ic_contact"/>-->
+
+<!--            </LinearLayout>-->
+
+            <RadioGroup
+                android:id="@+id/opsi_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_big"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Jenis kelamin Dosen"/>
+
+                <RadioButton
+                    android:id="@+id/laki"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Laki-laki"/>
+
+                <RadioButton
+                    android:id="@+id/perempuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Perempuan" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:weightSum="6"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Pembukaan"
+                    app:boxStrokeColor="@color/blue"
+                    app:boxStrokeWidth="0dp"
+                    app:hintTextColor="@color/blue"
+                    app:boxStrokeWidthFocused="0dp"
+                    android:layout_weight="6">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/fld_pembuka"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:background="@drawable/bg_field"
+                        android:textColor="@color/text_color"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageButton
+                    android:id="@+id/btn_opsi_pembuka"
+                    android:layout_width="36dp"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/ic_opsi"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:weightSum="6"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lyt_prodi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tujuan"
+                    app:boxStrokeColor="@color/blue"
+                    app:boxStrokeWidth="0dp"
+                    app:hintTextColor="@color/blue"
+                    app:boxStrokeWidthFocused="0dp"
+                    android:layout_weight="6">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/fld_tujuan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:background="@drawable/bg_field"
+                        android:textColor="@color/text_color"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageButton
+                    android:id="@+id/btn_opsi_tujuan"
+                    android:layout_width="36dp"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/ic_opsi"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:weightSum="6"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Pertanyaan"
+                    app:boxStrokeColor="@color/blue"
+                    app:boxStrokeWidth="0dp"
+                    app:hintTextColor="@color/blue"
+                    app:boxStrokeWidthFocused="0dp"
+                    android:layout_weight="6">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/fld_pertanyaan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:background="@drawable/bg_field"
+                        android:textColor="@color/text_color"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageButton
+                    android:id="@+id/btn_opsi_pertanyaan"
+                    android:layout_width="36dp"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/ic_opsi"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:weightSum="6"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lyt_univ"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Penutup"
+                    app:boxStrokeColor="@color/blue"
+                    app:boxStrokeWidth="0dp"
+                    app:hintTextColor="@color/blue"
+                    app:boxStrokeWidthFocused="0dp"
+                    android:layout_weight="6">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/fld_penutup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:background="@drawable/bg_field"
+                        android:textColor="@color/text_color"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageButton
+                    android:id="@+id/btn_opsi_penutup"
+                    android:layout_width="36dp"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/ic_opsi"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_simpan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SIMPAN"
+                    android:background="@drawable/bg_outline_press"
+                    android:textColor="@color/blue"
+                    android:layout_marginTop="@dimen/margin_big"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_weight="1"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_kirim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="KIRIM"
+                    android:background="@drawable/bg_button"
+                    android:textColor="@drawable/bg_button"
+                    android:layout_marginTop="@dimen/margin_big"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_medium"
+                    android:layout_weight="1"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

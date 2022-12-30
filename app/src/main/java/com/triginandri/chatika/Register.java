@@ -4,7 +4,6 @@ import static android.content.ContentValues.TAG;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
-import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,7 +17,6 @@ import android.widget.Toast;
 import com.google.android.material.textfield.TextInputEditText;
 import com.triginandri.chatika.Model.User;
 import com.triginandri.chatika.helper.ApiClient;
-import com.triginandri.chatika.helper.ApiConfig;
 import com.triginandri.chatika.helper.ApiInterface;
 import com.triginandri.chatika.helper.SharedPrefManager;
 
@@ -31,8 +29,6 @@ import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Register extends AppCompatActivity {
 
@@ -181,7 +177,8 @@ public class Register extends AppCompatActivity {
                             SharedPrefManager.getInstance(Register.this).userLogin(user_data);
 
                             startActivity(new Intent(Register.this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY));
-                            finish();
+//                            Register.super.finish();
+                            Register.super.onDestroy();
                         }
 
                     } catch (JSONException e){

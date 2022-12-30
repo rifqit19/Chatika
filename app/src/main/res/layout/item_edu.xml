@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        android:layout_marginBottom="@dimen/margin_extra_small"
+        android:layout_marginStart="@dimen/margin_extra_small"
+        android:layout_marginEnd="@dimen/margin_extra_small"
+
+        android:elevation="@dimen/margin_smid"
+        android:backgroundTint="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/margin_medium">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_thumb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_small"
+                app:cardCornerRadius="10dp"
+                >
+                <ImageView
+                    android:id="@+id/iv_menu"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_placeholder"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_smid"
+                android:layout_toRightOf="@+id/cv_thumb"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/txt_medium"
+                android:maxLines="2"
+                android:text="title"/>
+
+            <TextView
+                android:id="@+id/tv_sub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title"
+                android:layout_marginTop="@dimen/margin_extra_small"
+                android:layout_toRightOf="@id/cv_thumb"
+                android:maxLines="1"
+                android:text="subtitle"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/txt_smedium"
+
+                />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>

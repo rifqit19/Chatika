@@ -17,13 +17,22 @@
         <entry key="app/src/main/res/drawable-v24/bottom_navigation_color_selector.xml" value="0.137" />
         <entry key="app/src/main/res/drawable-v24/gradient_spinner.xml" value="0.17" />
         <entry key="app/src/main/res/drawable-v24/spinner_arrow_down.xml" value="0.17" />
+        <entry key="app/src/main/res/drawable/bg_logout.xml" value="0.118" />
+        <entry key="app/src/main/res/drawable/ic_contact.xml" value="0.118" />
+        <entry key="app/src/main/res/drawable/ic_opsi.xml" value="0.118" />
+        <entry key="app/src/main/res/layout/activity_detail_news.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_detail_profile.xml" value="0.17679558011049723" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.18696618563886996" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_register.xml" value="0.23736572265625003" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.15152893066406253" />
+        <entry key="app/src/main/res/layout/activity_send_message.xml" value="0.2164352416992188" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.23570912679036457" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.21768707482993196" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.27791748046875003" />
         <entry key="app/src/main/res/layout/fragment_saved_message.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_edu.xml" value="0.269304032759233" />
+        <entry key="app/src/main/res/layout/item_saved.xml" value="0.2435064935064935" />
         <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.20833333333333334" />
+        <entry key="app/src/main/res/menu/saved_menu.xml" value="0.20833333333333334" />
         <entry key="app/src/main/res/xml/network_security_config.xml" value="0.1" />
       </map>
     </option>

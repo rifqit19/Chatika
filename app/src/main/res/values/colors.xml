@@ -10,6 +10,7 @@
 
 
     <color name="blue">#1DA1F2</color>
+    <color name="transparent">#001DA1F2</color>
     <color name="dark_blue">#0086DF</color>
     <color name="light_blue">#DDE8ED</color>
     <color name="text_color">#3D4159</color>
